@@ -1,5 +1,5 @@
 {
-    "name": "cvirando/contacts-module",
+    "name": "cvirando/contacts",
     "description": "Tunnel CRM contacts module.",
     "type": "laravel-module",
     "license": "GPL-3.0-only",

@@ -1,0 +1,29 @@
+{
+    "name": "cvirando/contacts",
+    "description": "Tunnel CRM contacts module.",
+    "type": "laravel-module",
+    "license": "GPL-3.0-only",
+    "homepage": "https://github.com/cvirando/contacts-module",
+    "authors": [
+        {
+            "name": "CV. IRANDO",
+            "email": "info@irando.co.id"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Contacts\\": ""
+        }
+    },
+    "require": {
+        "intervention/image": "^2.7"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Contacts",
+    "alias": "contacts",
+    "description": "Add contacts to your project.",
+    "keywords": [
+        "cv irando",
+        "irando",
+        "contacts",
+        "module",
+        "modules"
+    ],
+    "priority": 0,
+    "providers": [
+        "Modules\\Contacts\\Providers\\ContactsServiceProvider"
+    ],
+    "files": []
+}

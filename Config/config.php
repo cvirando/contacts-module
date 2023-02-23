@@ -8,4 +8,6 @@
 
 return [
     'name' => 'Contacts',
+    'description' => 'Tunnel CRM contacts module.',
+    'image' => 'modules/contacts/contacts.png',
 ];

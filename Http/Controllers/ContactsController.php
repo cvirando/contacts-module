@@ -18,6 +18,11 @@ use Image;
 
 class ContactsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['role:super-admin|staff','permission:add contacts|edit contacts|delete contacts']);
+    }
+
     /**
      * Display a listing of the resource.
      * @return Renderable
@@ -68,7 +73,7 @@ class ContactsController extends Controller
             $contact->photo = $filename;
         }
         $contact->save();
-        return view('contacts::index');
+        return redirect()->route('ContactsIndex');
     }
 
     /**
@@ -78,7 +83,8 @@ class ContactsController extends Controller
      */
     public function show($id)
     {
-        return view('contacts::show');
+        $contact = Contact::findOrFail($id);
+        return view('contacts::show', compact('contact'));
     }
 
     /**
@@ -88,7 +94,8 @@ class ContactsController extends Controller
      */
     public function edit($id)
     {
-        return view('contacts::edit');
+        $contact = Contact::findOrFail($id);
+        return view('contacts::edit', compact('contact'));
     }
 
     /**
@@ -127,7 +134,7 @@ class ContactsController extends Controller
             }
         }
         $contact->save();
-        return view('contacts::index');
+        return redirect()->route('ContactsIndex');
     }
 
     /**
@@ -139,6 +146,6 @@ class ContactsController extends Controller
     {
         $contact = Contact::findOrFail($id);
         $contact->delete();
-        return view('constants::index');
+        return redirect()->route('ContactsIndex');
     }
 }

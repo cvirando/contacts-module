@@ -5,7 +5,7 @@
  * https://irando.co.id ©2023
  * info@irando.co.id
  */
- 
+
 namespace Modules\Contacts\Entities;
 
 use Illuminate\Database\Eloquent\Model;
@@ -14,6 +14,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Contact extends Model
 {
     use HasFactory;
+
+    protected $table = 'contacts';
 
     protected $fillable = [
         'name',

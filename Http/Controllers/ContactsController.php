@@ -128,10 +128,10 @@ class ContactsController extends Controller
             Image::make($image)->resize(250, 250)->save($pathToThumbImage);
             Image::make($image)->save($pathToBigImage);
             $oldFilename = $contact->photo;
-            $contact->photo = $filename;
             if(!empty($contact->photo)){
                 Storage::delete($oldFilename);
             }
+            $contact->photo = $filename;
         }
         $contact->save();
         return redirect()->route('ContactsIndex');

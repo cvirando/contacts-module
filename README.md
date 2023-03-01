@@ -2,7 +2,7 @@
 
 Tunnel CRM contacts module.
 
-## Install
+## How to install
 
 ```
 composer require cvirando/contacts-module

@@ -22,7 +22,7 @@
                               </div>
                               <div class="col-md-6">
                                   <label for="email">Email</label>
-                                  <input type="text" value="{{$contact->email}}" name="email" id="email" class="form-control">
+                                  <input type="text" value="{{$contact->email}}" name="email" id="email" class="form-control" required>
                               </div>
                               <div class="col-md-6">
                                   <label for="photo">Photo</label>
@@ -63,19 +63,19 @@
                               </div>
                               <div class="col-md-6">
                                     <label for="marital_status">Marital Status</label>
-                                    <select name="marital_status" id="marital_status" class="form-select">
+                                    <select required name="marital_status" id="marital_status" class="form-select">
                                         <option>Select</option>
-                                        <option value="Married">Married</option>
-                                        <option value="Single">Single</option>
+                                        <option value="Married" {{$contact->marital_status == 'Married' ? 'seleced' : ''}}>Married</option>
+                                        <option value="Single" {{$contact->marital_status == 'Single' ? 'seleced' : ''}}>Single</option>
                                     </select>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="gender">Gender</label>
-                                    <select name="gender" id="gender" class="form-select">
+                                    <select required name="gender" id="gender" class="form-select">
                                         <option>Select</option>
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Other">Other</option>
+                                        <option value="Male" {{$contact->gender == 'Male' ? 'seleced' : ''}}>Male</option>
+                                        <option value="Female" {{$contact->gender == 'Female' ? 'seleced' : ''}}>Female</option>
+                                        <option value="Other" {{$contact->gender == 'Other' ? 'seleced' : ''}}>Other</option>
                                     </select>
                                 </div>
                               <div class="col-md-12 mt-3">

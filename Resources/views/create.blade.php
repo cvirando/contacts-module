@@ -23,7 +23,7 @@
                               </div>
                               <div class="col-md-6">
                                   <label for="email">Email</label>
-                                  <input type="text" name="email" id="email" class="form-control">
+                                  <input type="text" name="email" id="email" class="form-control" required>
                               </div>
                               <div class="col-md-6">
                                   <label for="photo">Photo</label>
@@ -59,7 +59,7 @@
                               </div>
                               <div class="col-md-6">
                                     <label for="marital_status">Marital Status</label>
-                                    <select name="marital_status" id="marital_status" class="form-select">
+                                    <select required name="marital_status" id="marital_status" class="form-select">
                                         <option>Select</option>
                                         <option value="Married">Married</option>
                                         <option value="Single">Single</option>
@@ -67,7 +67,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="gender">Gender</label>
-                                    <select name="gender" id="gender" class="form-select">
+                                    <select required name="gender" id="gender" class="form-select">
                                         <option>Select</option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>

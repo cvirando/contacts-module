@@ -13,19 +13,27 @@
 @endsection
 
 @section('pagelinks')
+<div class="col-auto ms-auto d-print-none">
+    <div class="btn-list"></div>
+    <div class="d-none d-sm-inline">
+        <a href="{{route('ContactsCreate')}}" class="btn btn-primary btn-block my-2">Add New</a>
+    </div>
+</div>
 @endsection
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                <p>
+                    <a class="btn btn-green" href="{{route('payrollSettings')}}">Settings</a>
+                </p>
+            </div>
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">
                             Contacts
-                            <span class="float-end">
-                                <a href="{{route('ContactsCreate')}}" class="btn btn-sm btn-success">Add New</a>
-                            </span>
                         </h5>
                         <div class="table-responsive">
                             <table class="table-default table table-striped table-hover table-bordered">

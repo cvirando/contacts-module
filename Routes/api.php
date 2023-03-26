@@ -5,7 +5,7 @@
  * https://irando.co.id ©2023
  * info@irando.co.id
  */
- 
+
 use Illuminate\Http\Request;
 
 /*
@@ -19,6 +19,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/contacts', function (Request $request) {
-    return $request->user();
+Route::prefix('contacts')->group(function() {
+    Route::get('/', 'Api\ContactController@index');
+    Route::get('/{id}', 'Api\ContactController@show');
 });
